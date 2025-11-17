@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns="http://javafx.com/javafx/20" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.app.employee.EmployeeController" spacing="8">
+    <HBox spacing="8">
+        <VBox spacing="6" HBox.hgrow="ALWAYS" styleClass="form-pane">
+            <GridPane hgap="8" vgap="6">
+                <Label text="ID:" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+                <TextField fx:id="idField" GridPane.rowIndex="0" GridPane.columnIndex="1" editable="false" />
+                <Label text="Tipo doc:" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+                <ComboBox fx:id="documentTypeCombo" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+                <Label text="Número:" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+                <TextField fx:id="documentNumberField" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+                <Label text="Nombres:" GridPane.rowIndex="3" GridPane.columnIndex="0" />
+                <TextField fx:id="firstNameField" GridPane.rowIndex="3" GridPane.columnIndex="1" />
+                <Label text="Apellidos:" GridPane.rowIndex="4" GridPane.columnIndex="0" />
+                <TextField fx:id="lastNameField" GridPane.rowIndex="4" GridPane.columnIndex="1" />
+                <Label text="Sexo:" GridPane.rowIndex="5" GridPane.columnIndex="0" />
+                <ComboBox fx:id="genderCombo" GridPane.rowIndex="5" GridPane.columnIndex="1" />
+                <Label text="Estado civil:" GridPane.rowIndex="6" GridPane.columnIndex="0" />
+                <ComboBox fx:id="maritalCombo" GridPane.rowIndex="6" GridPane.columnIndex="1" />
+                <Label text="Fecha Nacimiento:" GridPane.rowIndex="7" GridPane.columnIndex="0" />
+                <DatePicker fx:id="birthDatePicker" GridPane.rowIndex="7" GridPane.columnIndex="1" />
+                <Label text="Dirección:" GridPane.rowIndex="8" GridPane.columnIndex="0" />
+                <TextField fx:id="addressField" GridPane.rowIndex="8" GridPane.columnIndex="1" />
+                <Label text="Ciudad:" GridPane.rowIndex="9" GridPane.columnIndex="0" />
+                <TextField fx:id="cityField" GridPane.rowIndex="9" GridPane.columnIndex="1" />
+                <Label text="Email:" GridPane.rowIndex="10" GridPane.columnIndex="0" />
+                <TextField fx:id="emailField" GridPane.rowIndex="10" GridPane.columnIndex="1" />
+            </GridPane>
+            <HBox spacing="8">
+                <Button fx:id="newBtn" text="Nuevo" styleClass="modern-button" />
+                <Button fx:id="saveBtn" text="Guardar" styleClass="modern-button" />
+                <Button fx:id="updateBtn" text="Actualizar" styleClass="modern-button" />
+                <Button fx:id="deleteBtn" text="Eliminar" styleClass="modern-button" />
+            </HBox>
+        </VBox>
+
+        <VBox spacing="6" HBox.hgrow="ALWAYS">
+            <HBox spacing="6">
+                <TextField fx:id="searchField" promptText="Buscar por documento o nombre" HBox.hgrow="ALWAYS" />
+                <Button fx:id="searchBtn" text="Buscar" />
+            </HBox>
+            <TableView fx:id="tableView" prefWidth="600" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="colId" text="ID" />
+                    <TableColumn fx:id="colDocument" text="Documento" />
+                    <TableColumn fx:id="colName" text="Nombres" />
+                    <TableColumn fx:id="colEmail" text="Email" />
+                </columns>
+            </TableView>
+        </VBox>
+    </HBox>
+</VBox>

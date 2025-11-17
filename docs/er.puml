@@ -1,0 +1,100 @@
+@startuml
+title MER - Recurso Humano (IUDIgital)
+
+entity "document_type" as dt {
+  * id : INTEGER
+  --
+  code : TEXT
+  name : TEXT
+}
+
+entity "gender" as g {
+  * id : INTEGER
+  --
+  code : TEXT
+  name : TEXT
+}
+
+entity "marital_status" as ms {
+  * id : INTEGER
+  --
+  code : TEXT
+  name : TEXT
+}
+
+entity "family_role" as fr {
+  * id : INTEGER
+  --
+  code : TEXT
+  name : TEXT
+}
+
+entity "education_level" as el {
+  * id : INTEGER
+  --
+  code : TEXT
+  name : TEXT
+}
+
+entity "university" as u {
+  * id : INTEGER
+  --
+  name : TEXT
+  country : TEXT
+  city : TEXT
+}
+
+entity "employee" as e {
+  * id : INTEGER
+  --
+  document_type_id : INTEGER
+  document_number : TEXT
+  first_name : TEXT
+  last_name : TEXT
+  gender_id : INTEGER
+  marital_status_id : INTEGER
+  birth_date : TEXT
+  address : TEXT
+  city : TEXT
+  email : TEXT
+}
+
+entity "phone" as p {
+  * id : INTEGER
+  --
+  employee_id : INTEGER
+  phone_number : TEXT
+  type : TEXT
+}
+
+entity "family_member" as fm {
+  * id : INTEGER
+  --
+  employee_id : INTEGER
+  family_role_id : INTEGER
+  first_name : TEXT
+  last_name : TEXT
+  gender_id : INTEGER
+}
+
+entity "education" as ed {
+  * id : INTEGER
+  --
+  employee_id : INTEGER
+  university_id : INTEGER
+  level_id : INTEGER
+  title : TEXT
+}
+
+dt ||--o{ e : "document_type_id"
+g ||--o{ e : "gender_id"
+ms ||--o{ e : "marital_status_id"
+e ||--o{ p : "employee_id"
+e ||--o{ fm : "employee_id"
+fr ||--o{ fm : "family_role_id"
+g ||--o{ fm : "gender_id"
+e ||--o{ ed : "employee_id"
+u ||--o{ ed : "university_id"
+el ||--o{ ed : "level_id"
+
+@enduml

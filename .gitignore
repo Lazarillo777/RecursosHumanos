@@ -1,0 +1,37 @@
+# Maven / Java
+target/
+*.class
+*.log
+*.war
+*.ear
+*.jar
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# IntelliJ
+.idea/
+*.iml
+out/
+
+# VS Code
+.vscode/
+
+# Mac
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# SQLite DB file
+app.db
+
+# Maven wrapper
+/.mvn/wrapper/maven-wrapper.jar
+
+# generated files
+.classpath
+.factorypath

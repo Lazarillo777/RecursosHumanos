@@ -1,0 +1,32 @@
+/* Simple modern styling for the app */
+root {
+  -fx-font-family: "Segoe UI", Roboto, Arial;
+  -fx-base: #f4f6f8;
+}
+
+.modern-toolbar {
+  -fx-background-color: linear-gradient(#4f9bd6, #3a7fb4);
+  -fx-padding: 8 12 8 12;
+}
+
+.title-label {
+  -fx-text-fill: white;
+  -fx-font-weight: bold;
+  -fx-font-size: 14px;
+}
+
+.form-pane {
+  -fx-background-color: white;
+  -fx-padding: 14;
+  -fx-spacing: 8;
+  -fx-border-color: #e3e6ea;
+  -fx-border-width: 1;
+  -fx-border-radius: 6;
+  -fx-background-radius: 6;
+}
+
+.modern-button {
+  -fx-background-color: #4f9bd6;
+  -fx-text-fill: white;
+  -fx-padding: 6 10 6 10;
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns="http://javafx.com/javafx/20" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.app.MainController" spacing="10" alignment="TOP_CENTER">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10" />
+    </padding>
+    <ToolBar styleClass="modern-toolbar">
+        <Label text="Recurso Humano - IUDIgital" styleClass="title-label" />
+    </ToolBar>
+    <TabPane>
+        <Tab text="Funcionarios">
+            <AnchorPane>
+                <fx:include source="employee/EmployeeView.fxml" />
+            </AnchorPane>
+        </Tab>
+        <Tab text="Principal">
+            <AnchorPane>
+                <fx:include source="employee/EmployeeView.fxml" />
+            </AnchorPane>
+        </Tab>
+    </TabPane>
+</VBox>
